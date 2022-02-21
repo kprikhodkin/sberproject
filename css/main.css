@@ -1,60 +1,113 @@
-.page-body{
+body {
+    font-family: 'SB Sans';
+    margin: 0;
+}
+
+.wrapper {
     max-width: 1200px;
     margin: auto;
-    background: #fff;
-    padding: 10px;
-    font-size: 18px;
-    line-height: 26px;
 }
-.title{
+
+.title {
     font-weight: 700;
     font-style: normal;
 }
 
-.title--h1{
+.title--gigantic {
     font-size: 32px;
     line-height: 40px;
 }
 
-.title--h2{
+.title--huge {
     font-size: 24px;
     line-height: 30px;
 }
 
-.title--h3{
+.title--big {
     font-size: 22px;
     line-height: 28px;
+    margin-top: 48px;
 }
 
-.title--h4{
+.title--medium {
+    margin-top: 62px;
     font-size: 20px;
     line-height: 28px;
 }
 
-.title--h5{
+.title--light {
     font-size: 18px;
     line-height: 22px;
 }
 
-
-.images{
-    width: 100%;
-    height: 100%;
+.title--tiny {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 16px;
 }
 
-.title{
-    font-weight: 700;
-    font-style:normal;
-
-}
-
-.news{
+.news {
     font-weight: 400;
-    font-style: italic;
+    font-size: 18px;
+    line-height: 26px;
+}
+.news a {
+    color: lightgreen;
+}
+.quote {
+    position: relative;
+    margin-top: 48px;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 18px;
+    line-height: 26px;
+    box-shadow: -2px 5px 20px rgba(0, 0, 0, 0.07);
+    border-radius: 6px;
+    padding-left: 45px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.quote::before {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 13px;
+    background-image: url("../img/marks.png");
+    position: absolute;
+    left: 16px;
+    top: 24px;
+}
+
+.quote__text {
+    margin: 0;
+}
+
+.quote__name {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+}
+
+.textquote {
+    margin-top: 64px;
+    border-left: 3px solid #21A137;
+    font-size: 18px;
+    line-height: 26px;
+    padding-left: 20px;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 16px;
+    margin-bottom: 56px;
 }
 
 /* Собственно сам слайдер */
-.slider{
+.slider {
     max-width: 90%;
     position: relative;
     margin: auto;
@@ -131,22 +184,56 @@
     }
 }
 
-.textcols{
-    white-space: nowrap;
+.textcols {
+    display: flex;
 }
 
 .textcols-item {
-    white-space: normal;
-    display: inline-block;
-    width: 48%;
-    vertical-align: top;
-}
-.textcols .textcols-item:first-child {
-    margin-right: 4%;
+    font-size: 18px;
+    line-height: 26px;
+    width: 488px;
+    margin-right: 64px;
 }
 
+.textcols-subitem {
+    font-size: 18px;
+    line-height: 26px;
+    width: 505px;
+}
 
-.bulleted-list{
-    max-width: 570px;
-    max-height: 452px;
+.bulleted {
+    width: 570px;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.bulleted-list {
+    position: relative;
+    list-style: none;
+    left: -20px;
+}
+
+.bulleted-item::before {
+    display: block;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #21A137;;
+    position: absolute;
+    left: 16px;
+
+}
+
+.bulleted-item {
+    padding-left: 16px;
+    padding-top: 15px;
+}
+
+.bulleted-content {
+    padding-top: 15px;
+}
+
+.textcols-subitem a {
+    color: lightgreen;
 }
