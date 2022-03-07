@@ -1,9 +1,14 @@
 
 body {
-    font-family: 'SB Sans';
+    font-family: 'SB Sans medium';
     margin: 0;
+    padding: 0;
 }
 
+.images {
+    width: 1920px;
+    height: 580px;
+}
 
 .wrapper {
     max-width: 1200px;
@@ -11,6 +16,7 @@ body {
 }
 
 .title {
+    font-family: 'SB Sans';
     font-weight: 700;
     font-style: normal;
 }
@@ -18,11 +24,14 @@ body {
 .title--gigantic {
     font-size: 32px;
     line-height: 40px;
+    margin-top: 69px;
 }
 
 .title--huge {
     font-size: 24px;
     line-height: 30px;
+    margin-top: 60px;
+    margin-bottom: 24px;
 }
 
 .title--big {
@@ -33,6 +42,7 @@ body {
 
 .title--medium {
     margin-top: 62px;
+    margin-bottom: 16px;
     font-size: 20px;
     line-height: 28px;
 }
@@ -40,27 +50,35 @@ body {
 .title--light {
     font-size: 18px;
     line-height: 22px;
+    margin-top: 48px;
+    margin-bottom: 16px;
 }
 
 .title--tiny {
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 16px;
+    margin-top: 48px;
 }
 
 .news {
     font-weight: 400;
     font-size: 18px;
     line-height: 26px;
+    margin-bottom: 48px;
+}
+
+.news p {
+    margin: 0;
+    padding-bottom: 10px;
 }
 .news a {
-    color: lightgreen;
+    color: #21A137;
 }
+
 .quote {
     position: relative;
-    margin-top: 48px;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
     font-size: 18px;
     line-height: 26px;
     box-shadow: -2px 5px 20px rgba(0, 0, 0, 0.07);
@@ -68,6 +86,7 @@ body {
     padding-left: 45px;
     padding-top: 24px;
     padding-bottom: 24px;
+    padding-right: 24px;
 }
 
 .quote::before {
@@ -99,23 +118,19 @@ body {
     font-size: 18px;
     line-height: 26px;
     padding-left: 20px;
+    margin-bottom: 62px;
 }
 
 .text {
     font-size: 18px;
     line-height: 26px;
-    margin-top: 16px;
     margin-bottom: 56px;
 }
 
-/* Собственно сам слайдер */
-.slider {
-    max-width: 90%;
-    position: relative;
-    margin: auto;
-    height: 300px;
-    margin-bottom: 15px;
+.text p {
+    margin: 0;
 }
+
 
 .textcols {
     display: flex;
@@ -125,13 +140,23 @@ body {
     font-size: 18px;
     line-height: 26px;
     width: 488px;
-    margin-right: 64px;
+    padding-right: 64px;
+}
+
+.textcols-item p {
+    margin: 0;
+    padding-bottom: 20px;
 }
 
 .textcols-subitem {
     font-size: 18px;
     line-height: 26px;
     width: 505px;
+}
+
+.textcols-subitem p {
+    margin: 0;
+    padding-bottom: 20px;
 }
 
 .bulleted {
@@ -144,9 +169,15 @@ body {
     position: relative;
     list-style-type: none;
     padding-left: 0;
+    margin: 0;
 }
 
-.bulleted-item::before {
+.bulleted-list li:first-child {
+    padding-top: 0;
+}
+
+
+.bulleted-list li::before {
     display: block;
     content: "";
     width: 4px;
@@ -159,20 +190,28 @@ body {
 
 }
 
-.bulleted-item {
+.bulleted-list li {
     position: relative;
     padding-left: 16px;
     padding-top: 15px;
 }
 
-.bulleted-content {
+.bulleted-number-list li {
     position: relative;
     padding-left: 20px;
     padding-top: 15px;
 }
 
+.bulleted-number-list li:first-child {
+    padding-top: 0;
+}
+
+.bulleted-number-list li:nth-child(n+10)::before {
+    left: -9px;
+}
+
 .textcols-subitem a {
-    color: lightgreen;
+    color: #21A137;
 }
 
 .bulleted-number-list {
@@ -181,17 +220,309 @@ body {
     padding-left: 0;
 }
 
-.bulleted-content::before {
+.bulleted-number-list li::before {
     content: counter(num) '.';
     counter-increment: num;
     display: block;
-    width: 13px;
-    height: 18px;
     position: absolute;
     left: 0px;
     color: #21A137;
     font-weight: 300;
     font-size: 14px;
+}
+
+.main-header-logo {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 236px;
+}
+
+
+ .main-header {
+    box-shadow: 0px 4px 19px 5px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 100%;
+ }
+
+ .main-navigation {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 1200px;
+    height: 100%;
+ }
+
+.menu{
+    display: flex;
+    background: rgba(231, 234, 236, 0.3);
+    border-radius: 3px;
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #BDBEC6;
+
+}
+
+.menu__item {
+    padding: 11px 8px 11px 8px;
+}
+
+.menu__item--active {
+    background-color: #fff;
+    margin: 4px 0px 4px 4px;
+    border-radius: 3px;
+    padding: 7px 5px 7px 5px;
+}
+
+.menu__item--active a {
+    color: #000;
+}
+
+.organization {
+    position: relative;
+    margin-left: 24px;
+    padding: 0 16px;
+    line-height: 16px;
+}
+
+.organization::before {
+    position: absolute;
+    content: "";
+    border-left: 1px solid rgba(0, 0, 0, 0.4);
+    top: 25px;
+    left: 0;
+    bottom: 25px;
+}
+
+.organization-help {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    vertical-align: text-bottom;
+}
+
+.organization-module{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.picture {
+    margin-right: 12px;
+    min-width: 16px;
+    min-height: 16px;
+}
+
+
+.contact {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 21px;
+    margin-left: auto;
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #000;
+}
+
+.join {
+    margin-left: 24px;
+}
+
+
+.join a {
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #E7EAEC;
+    border-radius: 5px;
+    padding: 13px 16px 13px 16px;
+}
+
+.preview {
+    display: block;
+    margin-left: 16px;
+    white-space: nowrap;
+}
+
+.footer {
+    font-size: 14px;
+    line-height: 22px;
+    background: #F3F4F7;
+    padding-top: 32px;
+    margin-top: 72px;
+}
+
+.footer__basis {
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+.center {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    max-width: 100%;
+    max-height: 60px;
+    width: 202px;
+}
+
+.footer__logo img {
+    width: 100%;
+    height: auto;
+}
+
+.footer__title, .footer__tel {
+    white-space: nowrap;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 12px;
+}
+
+.footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__link {
+    color: inherit;
+    font-weight: inherit;
+    position: relative;
+    text-decoration: none;
+}
+
+.footer__link--theme {
+    color: #29A239;
+}
+
+.footer__text {
+    margin: 0;
+    color: inherit;
+}
+
+.footer__feedback {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.footer__feedback__link {
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #E7EAEC;
+    text-decoration: none;
+    color: inherit;
+    padding: 8px 22px 8px 0px;
+}
+
+.footer_feedback_logo {
+    width: 12px;
+    height: 11px;
+    margin-right: 12px;
+    margin-left: 13px;
+}
+
+.footer__row+.footer__row {
+    border-top: 1px solid #E9EBEF;
+    margin-top: 21px;
+    padding-top: 16px;
+}
+
+.footer__copyright {
+    color: #7C7F81;
+}
+
+
+.footer__copyright--secondary {
+    line-height: 16px;
+}
+
+
+.footer__networks {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__link--icon {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.footer__link_theme {
+    display: inline-flex;
+    background-color: #fff;
+    height: 38px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.footer__link+.footer__link {
+    margin-left: 24px;
+}
+
+.footer__apps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 58px;
+}
+
+.footer__apps-items {
+    margin-left: 24px;
+}
+
+.footer__apps-items li {
+    display: inline;
+    margin-left: 8px;
+}
+
+.footer__legal-links {
+    background-color: #E9EBEF;
+    text-align: center;
+    margin-top: 22px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+}
+
+.centerary {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer_legal-link {
+    display: inline-block;
+    margin-left: 74px;
+}
+
+.footer__link--themes {
+    color: #7C7F81;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 1024px) {
