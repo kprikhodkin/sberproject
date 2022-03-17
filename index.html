@@ -1,17 +1,39 @@
 <!DOCTYPE html>
-<html lang="rus">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no">
     <title>Title</title>
 </head>
 <body>
     <header class="main-header">
         <nav class="main-navigation">
+            <div class="menu-bar">
+                <a href="#" class="menu-btn">
+                    <span></span>
+                </a>
+            </div>
+            <div class="menu-slide">
+                <ul>
+                    <li>
+                        <a href="tel:+78002221100">+7 800 222-11-00</a>
+                    </li>
+                    <li>
+                        <a href="#">Помощь</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/Vector.svg" alt="Вектор" class="picture">
+                            <span>Наши вакансии</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <div class="main-header-logo">
-                <a href="#">
+                <a href="#" class="logotype">
                     <img src="img/logo.svg" alt="Логотип СберМаркета">
                 </a>
             </div>
@@ -57,15 +79,32 @@
                 <span class="quote__name">© Оскар Уайльд</span>
             </blockquote>
         <h3 class="title title--big">Заголовок H3</h3>
-
+    </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/image.png">
+                    <p class="textimage">Название изображения small</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/swipernext.svg" >
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/swiperperv.svg">
+                </div>
+            </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+        </div>
+        <div class="wrapper">
         <p class="textquote">Учитывая ключевые сценарии поведения, перспективное планирование, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для форм воздействия.</p>
         <h4 class="title title--medium">Заголовок H4</h4>
         <div class="textcols">
-            <div class="textcols-item">
+            <div class="textcols-item textcols--help">
                 <p>Также как начало повседневной работы по формированию позиции однозначно фиксирует необходимость благоприятных перспектив. А также диаграммы связей рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. Значимость этих проблем настолько очевидна, что выбранный нами инновационный путь способствует подготовке и реализации прогресса профессионального сообщества.</p>
                 <p>Есть над чем задуматься: элементы политического процесса объединены в целые кластеры себе подобных. Противоположная точка зрения подразумевает, что действия представителей оппозиции в равной степени предоставлены сами себе. Идейные соображения высшего порядка, а также социально-экономическое развитие однозначно фиксирует необходимость благоприятных перспектив.</p>
             </div>
-            <div class="textcols-subitem">
+            <div class="textcols-item textcols--subhelp">
                 <p>Действия представителей оппозиции, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объективно рассмотрены соответствующими инстанциями. Безусловно, сложившаяся структура организации говорит о возможностях модели развития. Но повышение уровня гражданского сознания <a href="#">создаёт предепосылки</a> для переосмысления внешнеэкономических политик.</p>
                 <p>Противоположная точка зрения подразумевает, что действия представителей оппозиции в равной степени предоставлены сами себе.</p>
             </div>
@@ -105,7 +144,7 @@
                     </div>
                     <div class="footer__column">
                         <div class="footer__title">Сбермаркет</div>
-                        <ul>
+                        <ul class="footer__list">
                             <li>
                                 <a href="#" class="footer__link">О компании</a>
                             </li>
@@ -125,7 +164,7 @@
                     </div>
                     <div class="footer__column">
                         <div class="footer__title">Помощь покупателю</div>
-                        <ul>
+                        <ul class="footer__list">
                             <li>
                                 <a href="#" class="footer__link">Как мы работаем</a>
                             </li>
@@ -217,16 +256,17 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>          
+        </div>
             <div class="footer__legal-links">
                 <div class="centerary">
                     <a href="#" class="footer_legal-link footer__link--themes">Политика возврата</a>
                     <a href="#" class="footer_legal-link footer__link--themes">Обработка персональных данных</a>
                     <a href="#" class="footer_legal-link footer__link--themes">Официальное уведомление</a>
-
                 </div>
             </div>
         </footer>
-        <script src="js/slider.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="js/main.js"></script>
 </body>
 </html>
