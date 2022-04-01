@@ -10,3 +10,10 @@
     url("../fonts/SBSansText-Regular.ttf");
     font-weight: 400;
 }
+
+@font-face {
+    font-family: 'SB Sans regular';
+    src: url("../fonts/SBSansText-Medium.ttf"),
+    url("../fonts/SBSansText-Medium.ttf");
+    font-weight: 300;
+}

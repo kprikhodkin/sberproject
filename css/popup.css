@@ -1,0 +1,323 @@
+
+
+.title__form {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-style: normal;
+}
+
+.title__form--huge {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom:  32px;
+    margin-top: 64px;
+}
+
+.placeholder-form {
+    font-family: 'Roboto';
+    font-weight: 300;
+    box-sizing: border-box;
+    width: 640px;
+    margin: 0 auto;
+}
+.placeholder-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 24px;
+}
+.placeholder-container input, select {
+    border: 1px solid #AFAFAF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #000;
+    font-size: 14px;
+    line-height: 16px;  
+    height: 32px;
+    outline: 0;
+    padding: 0 16px;
+    width: 100%;
+}
+
+.placeholder-container label {
+    color: #AFAFAF;
+    font-size: 14px;
+    line-height: 16px;
+    pointer-events: none;
+    position: absolute;
+    transition: all 200ms;
+    top: 8px;
+    left: 16px;
+}
+
+.placeholder-container input:focus + label,
+.placeholder-container input:not(:placeholder-shown) + label,
+.placeholder-container textarea:focus + label,
+.placeholder-container textarea:not(:placeholder-shown) + label,
+.placeholder-container select:focus + label,
+.placeholder-container select:not(:placeholder-shown)+ label{
+    top: -15px;
+    left: 0px;
+    font-size: 11px; 
+}
+
+.placeholder-container textarea {
+    resize: none;
+    border: 1px solid #AFAFAF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #000;
+    font-size: 14px;
+    line-height: 16px;
+    outline: 0;
+    padding: 8px 16px;
+    height: 80px;
+    width: 100%;
+}
+
+.title__form--big {
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+}
+
+.portfolio__form {
+    display: flex;
+    width: 100%;
+    position: relative;
+    border: 1px dashed #AFAFAF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 80px;
+}
+
+.input__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.input__file-button-text {
+    position: relative;
+    top: 35%;
+    border: 1px solid #FF4F12;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color:#FF4F12;
+    padding: 8px 16px 8px 16px; 
+    cursor: pointer;
+}
+
+.portfolio__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 16px;
+    margin-left: 16px;
+    color: #979797;
+}
+
+.text--decoration {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+}
+.portfolio--decoration {
+    font-size: 11px;
+    line-height: 13px;
+    margin: 0;
+}
+
+.title__form--medium {
+    margin-top: 32px;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 16px;
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.custom-checkbox + label::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #FF4F12;
+    border-radius: 3px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%;
+}
+
+.custom-checkbox:checked + label::before {
+    background-image: url("/img/checkboxstrelka.svg");
+}
+
+.chechboxMaster label {
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
+    border-color: #fff;
+}
+
+.custom-checkbox:not(:disabled):active + label::before {
+    border-color: #FF4F12;
+}
+
+.custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-radio + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.custom-radio + label::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #FF4F12;
+    border-radius: 20px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 50%;
+}
+
+.custom-radio:not(:disabled):not(:checked) + label:hover::before {
+    border-color: #fff;
+}
+
+.custom-radio:checked + label::before {
+    background-image: url("/img/radioellipse.svg");
+}
+
+.radioTime label {
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.slidecontainer {
+    width: 100%;
+    margin-bottom: 38px;
+}
+
+.slidecontainer input {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1px;
+    outline: none;
+    background: #FF4F12;
+}
+
+.slidecontainer input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 13px;
+    height: 13px;
+    background: #FF4F12;
+    border-radius: 50%;
+}
+
+.title__form--regular {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.quantity__inner {
+    display: inline-flex;
+    border-radius: 5px;
+    border: 1px solid #AFAFAF;
+    margin-bottom: 24px;
+}      
+
+.quantity__inner .btn__minus,
+.quantity__inner .btn__plus,
+.quantity__inner .quantity {
+    height: 30px;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+    outline: 0;
+}
+
+.quantity__inner .btn__minus,.quantity__inner .quantity {
+    border-right: 1px solid #AFAFAF;
+}
+
+.quantity__inner .quantity {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    color: #000;
+}
+
+.form__mode {
+	display: inline-block;
+	overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #AFAFAF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 48px;
+
+}
+
+.form__mode-item {
+	float: left;
+	display: inline-block;
+}
+.form__mode-item input[type=radio] {
+	display: none;
+}
+
+.form__mode-item  label {
+    display: inline-block;
+    font-size: 12px;
+	line-height: 14px;   
+	cursor: pointer;
+	user-select: none; 
+    color: #000;  
+    transition: .5s;
+}
+ 
+.form__mode .item-online label {
+    border-radius: 3px;
+    margin: 3px 0px 3px 3px;
+    padding: 5px 15px 5px 16px;
+}
+.form__mode .item-offline label {
+	border-radius: 3px;
+    margin: 3px 3px 3px 0px;
+    padding: 5px 15px 5px 15px;
+}
+ 
+
+.form__mode .item-online input[type=radio]:checked + label {
+    background: rgba(229, 229, 229, 0.5);
+}
+.form__mode .item-offline input[type=radio]:checked + label {
+    background: rgba(229, 229, 229, 0.5);
+}

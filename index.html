@@ -5,6 +5,11 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="/js/jquery.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no">
     <title>Title</title>
 </head>
@@ -37,20 +42,22 @@
                     <img src="img/logo.svg" alt="Логотип СберМаркета">
                 </a>
             </div>
-                <div class="preview">
-                    <ul class="menu">
-                        <li class="menu__item menu__item--active">
-                            <a href="#">Для себя</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#">Для бизнеса</a>
-                        </li>
-                    </ul>
+                <div class="form_toggle">
+                    <div class="form_toggle-item item-1">
+                        <input id="fid-1" type="radio" name="radio" value="off" checked>
+                        <label for="fid-1">Для себя</label>
+                    </div>
+                    <div class="form_toggle-item item-2">
+                        <input id="fid-2" type="radio" name="radio" value="on">
+                        <label for="fid-2">Для бизнеса</label>
+                    </div>
                 </div>
                     <div class="organization">
                         <a href="#" class="organization-help">
                             <div class="organization-module">
-                                <img src="img/Vector.svg" alt="Вектор" class="picture">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8667 16H2.13333C0.9552 16 0 15.377 0 14.6087V4.17391C0 3.40557 0.9552 2.78261 2.13333 2.78261H5.86667V1.3913C5.86667 0.622957 6.82187 0 8 0C9.17813 0 10.1333 0.622957 10.1333 1.3913V2.78261H13.8667C15.0448 2.78261 16 3.40557 16 4.17391V14.6087C16 15.377 15.0448 16 13.8667 16ZM9.06667 1.3913C9.06667 1.0073 8.5888 0.695652 8 0.695652C7.4112 0.695652 6.93333 1.0073 6.93333 1.3913V3.47826C6.93333 3.86226 7.4112 4.17391 8 4.17391C8.5888 4.17391 9.06667 3.86226 9.06667 3.47826V1.3913ZM14.9333 4.17391C14.9333 3.78991 14.4555 3.47826 13.8667 3.47826H10.1333C10.1333 4.24661 9.17813 4.86957 8 4.86957C6.82187 4.86957 5.86667 4.24661 5.86667 3.47826H2.13333C1.54453 3.47826 1.06667 3.78991 1.06667 4.17391V12.5217H3.09173C3.21493 12.3169 3.4416 11.983 3.7104 11.7426C3.72373 11.7377 4.16267 11.1377 6.376 11.12C6.3792 11.1127 6.38133 10.7576 6.38773 10.7628C6.21707 10.6925 5.99467 10.5833 5.8272 10.479C5.6912 10.4247 5.208 10.121 5.0528 9.58052C5.0064 9.392 4.79253 8.50261 4.79253 8.13148C4.79253 7.02852 5.4672 5.912 7.96747 5.912C7.97867 5.912 8.0208 5.912 8.032 5.912C10.5323 5.912 11.2069 7.02852 11.2069 8.13148C11.2069 8.50261 10.9931 9.392 10.9467 9.58052C10.7915 10.121 10.3088 10.4247 10.1723 10.479C10.0053 10.5837 9.78293 10.6925 9.61173 10.7628C9.61867 10.7576 9.62133 11.113 9.62347 11.12C11.8373 11.1377 12.2763 11.7377 12.2891 11.7426C12.5579 11.983 12.7845 12.3169 12.9077 12.5217H14.9333V4.17391ZM8.5408 10.6045C8.54027 10.6056 8.54027 10.6059 8.54027 10.6059C8.53867 10.6059 8.5312 10.3343 8.5312 10.3343C8.5312 10.3343 9.15307 10.1252 9.6144 9.85496C9.8848 9.70991 10.0096 9.38122 10.0096 9.38122C10.0827 9.09322 10.1365 8.38052 10.1365 8.09322C10.1365 7.376 9.5856 6.60452 7.99947 6.60452C6.41333 6.60452 5.8624 7.37635 5.8624 8.09322C5.8624 8.38052 5.91733 9.09322 5.98933 9.38122C5.98933 9.38122 6.11413 9.70991 6.38453 9.85496C6.84587 10.1252 7.46773 10.3343 7.46773 10.3343C7.46773 10.3343 7.46027 10.6059 7.45813 10.6059C7.45813 10.6059 7.45813 10.6056 7.45813 10.6045C7.45813 10.6045 7.4736 11.0031 7.4736 11.1214C7.4736 11.5955 6.7456 11.8237 6.288 11.8237C6.28693 11.8237 6.2864 11.8237 6.2864 11.8237C4.90347 11.8633 4.57707 12.1631 4.5744 12.1659C4.49013 12.2539 4.37333 12.3416 4.2656 12.5217H11.7349C11.6267 12.3416 11.5099 12.2539 11.4245 12.1663C11.4213 12.1631 11.0944 11.8637 9.712 11.824H9.71093C9.25333 11.824 8.5248 11.5962 8.5248 11.1217C8.5248 11.0031 8.5408 10.6045 8.5408 10.6045ZM14.9333 13.2174H1.06667V14.6087C1.06667 14.9927 1.54453 15.3043 2.13333 15.3043H13.8667C14.4555 15.3043 14.9333 14.9927 14.9333 14.6087V13.2174ZM11.7333 14.6087H10.1333C9.8384 14.6087 9.6 14.4532 9.6 14.2609C9.6 14.0685 9.8384 13.913 10.1333 13.913H11.7333C12.0283 13.913 12.2667 14.0685 12.2667 14.2609C12.2667 14.4532 12.0283 14.6087 11.7333 14.6087ZM7.46667 14.6087H4.26667C3.97173 14.6087 3.73333 14.4532 3.73333 14.2609C3.73333 14.0685 3.97173 13.913 4.26667 13.913H7.46667C7.7616 13.913 8 14.0685 8 14.2609C8 14.4532 7.7616 14.6087 7.46667 14.6087ZM7.46667 1.3913H8.53333V2.08696H7.46667V1.3913Z" fill="#29A239"/>
+                                </svg>
                                 <span>Наши вакансии</span>
                             </div>
                         </a>
@@ -59,7 +66,7 @@
                 <a href="tel:+78002221100">+7 800 222-11-00</a>
             </div>
             <div class="join">
-                <a href="#">Войти</a>
+                <button name="button">Войти</button>
             </div>
         </nav>
     </header>
@@ -84,17 +91,25 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="img/image.png">
-                    <p class="textimage">Название изображения small</p>
+                    <p>Название изображения small</p>
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/swipernext.svg" >
+                    <img src="img/swipernext.png" >
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/swiperperv.svg">
+                    <img src="img/swiperprev.png">
                 </div>
             </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+            <button class="swiper-button-next">
+                <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 4L6.27408e-07 7.4641L9.30249e-07 0.535898L6 4Z" fill="#21A137" fill-opacity="0.8"/>
+                </svg>                        
+            </button>
+            <button class="swiper-button-prev">
+                <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.24537e-07 4L6 0.535899L6 7.4641L5.24537e-07 4Z" fill="#21A137" fill-opacity="0.8"/>
+                </svg>                        
+            </button>
         </div>
         <div class="wrapper">
         <p class="textquote">Учитывая ключевые сценарии поведения, перспективное планирование, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для форм воздействия.</p>
@@ -137,8 +152,8 @@
         <footer class="footer">
             <div class="center">
                 <div class="footer__row">
-                    <div class="footer__column">
-                        <a href="#" class="footer__logo">
+                    <div class="footer__logo">
+                        <a href="#">
                             <img src="img/footerlogo.svg" alt="Логотип СберМаркета">
                         </a>
                     </div>
@@ -266,6 +281,100 @@
                 </div>
             </div>
         </footer>
+            <div class="placeholder-form">
+                <h1 class="title__form title__form--huge">Регистрация</h1>
+                <div class="placeholder-container">
+                    <input type="text" id="name" name="name" placeholder=" ">
+                    <label for="name">Фамилия, имя</label>
+                </div>
+                <div class="placeholder-container">
+                    <input type="tel" id="phone" name="phone" placeholder=" ">
+                    <label for="phone">Телефон</label>
+                </div>
+                <div class="placeholder-container">
+                    <select id="city" name="city" aria-placeholder=" ">
+                        <option></option>
+                        <option value="Екатеринбург">Екатеринбург</option>
+                        <option value="Каменск-Уральский">Каменск-Уральский</option>
+                        <option value="Верхняя пышма">Верхняя пышма</option>
+                        <option value="Первоуральск">Первоуральск</option>
+                    </select>
+                    <label for="city">Город</label>
+                </div>
+                <div class="placeholder-container">
+                    <textarea id="msg" name="msg" placeholder=" "></textarea>
+                    <label for="msg">Комментарий</label>
+                </div>
+                <h2 class="title__form title__form--big">Прикрепите портфолио</h2>
+                <div class="portfolio__form">
+                    <input type="file" name="myfile" id="myFile" class="input__file">
+                    <div class="portfolio__text">
+                        <p class="text--decoration">Переместите сюда</p>
+                        <p class="portfolio--decoration">Возможные форматы: pdf, doc, docx</p>
+                    </div>
+                    <label for="myFile">
+                        <span class="input__file-button-text">Выбрать файл</span>
+                    </label>
+                </div>
+                <h2 class="title__form title__form--medium">Выберите один или несколько мастерклассов</h2>
+            <div class="chechboxMaster">
+                <div>
+                    <input type="checkbox" id="cbTypography" class="custom-checkbox">
+                    <label for="cbTypography">Типографика и верстка</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="cbTheory" class="custom-checkbox">
+                    <label for="cbTheory">Теория близости</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="cbGrid" class="custom-checkbox">
+                    <label for="cbGrid">Сетки</label>
+                </div>
+            </div>
+            <h2 class="title__form title__form--medium">Выберите один из промежутков времени</h2>
+            <div class="radioTime">
+                <div>
+                    <input type="radio" id="rbFirstTime" class="custom-radio">
+                    <label for="rbFirstTime">12:00 – 14:00</label>
+                </div>
+                <div>
+                    <input type="radio" id="rbSecondTime" class="custom-radio">
+                    <label for="rbSecondTime">15:00 – 17:00</label>
+                </div>
+                <div>
+                    <input type="radio" id="rbThirdTime" class="custom-radio">
+                    <label for="rbThirdTime">19:00 – 21:00</label>
+                </div>
+            </div>
+            <h2 class="title__form title__form--medium">Сколько вы готовы заплатить за мероприятие?</h2>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="2000" id="myRange">
+            </div>
+            <h2 class="title__form title__form--regular">Кол-во билетов</h2>
+            <div class="quantity__inner">
+                <button class="btn__minus"><svg width="8" height="2" viewBox="0 0 8 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 1L8 1" stroke="#FF4F12"/>
+                    </svg>
+                </button>
+                <input type="text" class="quantity" value="1" data-max-count="5">
+                <button class="btn__plus"><svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 4L8 4" stroke="#FF4F12"/>
+                    <path d="M4 0L4 8" stroke="#FF4F12"/>
+                    </svg>
+                </button>
+            </div>
+            <h2 class="title__form title__form--regular">Режим</h2>
+            <div class="form__mode">
+                <div class="form__mode-item item-online">
+                    <input id="online" type="radio" name="radio_mode" value="on" checked>
+                    <label for="online">Online</label>
+                </div>
+                <div class="form__mode-item item-offline">
+                    <input id="offline" type="radio" name="radio_mode" value="off">
+                    <label for="offline">Offline</label>
+                </div>
+            </div>
+        </div>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="js/main.js"></script>
 </body>
