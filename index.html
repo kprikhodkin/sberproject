@@ -66,7 +66,7 @@
                 <a href="tel:+78002221100">+7 800 222-11-00</a>
             </div>
             <div class="join">
-                <button name="button">Войти</button>
+                <a href="#openModal">Войти</a>
             </div>
         </nav>
     </header>
@@ -281,99 +281,108 @@
                 </div>
             </div>
         </footer>
-            <div class="placeholder-form">
-                <h1 class="title__form title__form--huge">Регистрация</h1>
-                <div class="placeholder-container">
-                    <input type="text" id="name" name="name" placeholder=" ">
-                    <label for="name">Фамилия, имя</label>
-                </div>
-                <div class="placeholder-container">
-                    <input type="tel" id="phone" name="phone" placeholder=" ">
-                    <label for="phone">Телефон</label>
-                </div>
-                <div class="placeholder-container">
-                    <select id="city" name="city" aria-placeholder=" ">
-                        <option></option>
-                        <option value="Екатеринбург">Екатеринбург</option>
-                        <option value="Каменск-Уральский">Каменск-Уральский</option>
-                        <option value="Верхняя пышма">Верхняя пышма</option>
-                        <option value="Первоуральск">Первоуральск</option>
-                    </select>
-                    <label for="city">Город</label>
-                </div>
-                <div class="placeholder-container">
-                    <textarea id="msg" name="msg" placeholder=" "></textarea>
-                    <label for="msg">Комментарий</label>
-                </div>
-                <h2 class="title__form title__form--big">Прикрепите портфолио</h2>
-                <div class="portfolio__form">
-                    <input type="file" name="myfile" id="myFile" class="input__file">
-                    <div class="portfolio__text">
-                        <p class="text--decoration">Переместите сюда</p>
-                        <p class="portfolio--decoration">Возможные форматы: pdf, doc, docx</p>
+            <div class="placeholder-form" id="openModal">
+                <form action="#">
+                    <a href="#" class="close__btn"></a>
+                    <h1 class="title__form title__form--huge">Регистрация</h1>
+                    <div class="placeholder-container">
+                        <input type="text" id="name" name="name" placeholder=" ">
+                        <label for="name">Фамилия, имя</label>
                     </div>
-                    <label for="myFile">
-                        <span class="input__file-button-text">Выбрать файл</span>
-                    </label>
+                    <div class="placeholder-container">
+                        <input type="tel" id="phone" name="phone" placeholder=" ">
+                        <label for="phone">Телефон</label>
+                    </div>
+                    <div class="placeholder-container">
+                        <select id="city" name="city" aria-placeholder=" ">
+                            <option></option>
+                            <option value="Екатеринбург">Екатеринбург</option>
+                            <option value="Каменск-Уральский">Каменск-Уральский</option>
+                            <option value="Верхняя пышма">Верхняя пышма</option>
+                            <option value="Первоуральск">Первоуральск</option>
+                        </select>
+                        <label for="city">Город</label>
+                    </div>
+                    <div class="placeholder-container">
+                        <textarea id="msg" name="msg" placeholder=" "></textarea>
+                        <label for="msg">Комментарий</label>
+                    </div>
+                    <h2 class="title__form title__form--big">Прикрепите портфолио</h2>
+                    <div class="portfolio__form">
+                        <input type="file" name="myfile" id="myFile" class="input__file">
+                        <div class="portfolio__text">
+                            <p class="text--decoration">Переместите сюда</p>
+                            <p class="portfolio--decoration">Возможные форматы: pdf, doc, docx</p>
+                        </div>
+                        <label for="myFile">
+                            <span class="input__file-button-text">Выбрать файл</span>
+                        </label>
+                    </div>
+                    <h2 class="title__form title__form--medium">Выберите один или несколько мастерклассов</h2>
+                <div class="chechboxMaster">
+                    <div>
+                        <input type="checkbox" id="cbTypography" class="custom-checkbox">
+                        <label for="cbTypography">Типографика и верстка</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="cbTheory" class="custom-checkbox">
+                        <label for="cbTheory">Теория близости</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="cbGrid" class="custom-checkbox">
+                        <label for="cbGrid">Сетки</label>
+                    </div>
                 </div>
-                <h2 class="title__form title__form--medium">Выберите один или несколько мастерклассов</h2>
-            <div class="chechboxMaster">
-                <div>
-                    <input type="checkbox" id="cbTypography" class="custom-checkbox">
-                    <label for="cbTypography">Типографика и верстка</label>
+                <h2 class="title__form title__form--medium">Выберите один из промежутков времени</h2>
+                <div class="radioTime">
+                    <div>
+                        <input type="radio" id="rbFirstTime" class="custom-radio">
+                        <label for="rbFirstTime">12:00 – 14:00</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="rbSecondTime" class="custom-radio">
+                        <label for="rbSecondTime">15:00 – 17:00</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="rbThirdTime" class="custom-radio">
+                        <label for="rbThirdTime">19:00 – 21:00</label>
+                    </div>
                 </div>
-                <div>
-                    <input type="checkbox" id="cbTheory" class="custom-checkbox">
-                    <label for="cbTheory">Теория близости</label>
+                <h2 class="title__form title__form--medium">Сколько вы готовы заплатить за мероприятие?</h2>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="2000" id="myRange">
                 </div>
-                <div>
-                    <input type="checkbox" id="cbGrid" class="custom-checkbox">
-                    <label for="cbGrid">Сетки</label>
+                <h2 class="title__form title__form--regular">Кол-во билетов</h2>
+                <div class="quantity__inner">
+                    <button class="btn__minus"><svg width="8" height="2" viewBox="0 0 8 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 1L8 1" stroke="#FF4F12"/>
+                        </svg>
+                    </button>
+                    <input type="text" class="quantity" value="1" data-max-count="5">
+                    <button class="btn__plus"><svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 4L8 4" stroke="#FF4F12"/>
+                        <path d="M4 0L4 8" stroke="#FF4F12"/>
+                        </svg>
+                    </button>
                 </div>
-            </div>
-            <h2 class="title__form title__form--medium">Выберите один из промежутков времени</h2>
-            <div class="radioTime">
-                <div>
-                    <input type="radio" id="rbFirstTime" class="custom-radio">
-                    <label for="rbFirstTime">12:00 – 14:00</label>
+                <h2 class="title__form title__form--regular">Режим</h2>
+                <div class="form__mode">
+                    <div class="form__mode-item item-online">
+                        <input id="online" type="radio" name="radio_mode" value="on" checked>
+                        <label for="online">Online</label>
+                    </div>
+                    <div class="form__mode-item item-offline">
+                        <input id="offline" type="radio" name="radio_mode" value="off">
+                        <label for="offline">Offline</label>
+                    </div>
                 </div>
-                <div>
-                    <input type="radio" id="rbSecondTime" class="custom-radio">
-                    <label for="rbSecondTime">15:00 – 17:00</label>
+                <div class="btn__submit">
+                    <button type="submit">Отправить</button>
+                    <div class="submit__text">
+                        <p>Нажимая на кнопку, вы соглашаетесь с <br>Политикой обработки персональных данных</p>
+                    </div>
                 </div>
-                <div>
-                    <input type="radio" id="rbThirdTime" class="custom-radio">
-                    <label for="rbThirdTime">19:00 – 21:00</label>
-                </div>
-            </div>
-            <h2 class="title__form title__form--medium">Сколько вы готовы заплатить за мероприятие?</h2>
-            <div class="slidecontainer">
-                <input type="range" min="1" max="2000" id="myRange">
-            </div>
-            <h2 class="title__form title__form--regular">Кол-во билетов</h2>
-            <div class="quantity__inner">
-                <button class="btn__minus"><svg width="8" height="2" viewBox="0 0 8 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 1L8 1" stroke="#FF4F12"/>
-                    </svg>
-                </button>
-                <input type="text" class="quantity" value="1" data-max-count="5">
-                <button class="btn__plus"><svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 4L8 4" stroke="#FF4F12"/>
-                    <path d="M4 0L4 8" stroke="#FF4F12"/>
-                    </svg>
-                </button>
-            </div>
-            <h2 class="title__form title__form--regular">Режим</h2>
-            <div class="form__mode">
-                <div class="form__mode-item item-online">
-                    <input id="online" type="radio" name="radio_mode" value="on" checked>
-                    <label for="online">Online</label>
-                </div>
-                <div class="form__mode-item item-offline">
-                    <input id="offline" type="radio" name="radio_mode" value="off">
-                    <label for="offline">Offline</label>
-                </div>
-            </div>
+            </form>
         </div>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="js/main.js"></script>

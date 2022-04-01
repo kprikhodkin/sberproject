@@ -10,16 +10,38 @@
     font-size: 24px;
     line-height: 28px;
     margin-bottom:  32px;
-    margin-top: 64px;
+    margin-top: 24px;
 }
 
+
 .placeholder-form {
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgb(255,255,255);
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
     font-family: 'Roboto';
     font-weight: 300;
     box-sizing: border-box;
-    width: 640px;
+    width: 662px;
     margin: 0 auto;
+    padding-left: 64px;
+    padding-right: 64px;
+    transition: .6s;
 }
+
+.placeholder-form:target {
+    opacity: 1;
+    pointer-events: auto;
+    overflow-y: auto;
+}
+
+
 .placeholder-container {
     position: relative;
     width: 100%;
@@ -79,6 +101,37 @@
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 8px;
+}
+
+.close__btn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.3;
+    margin: 0;
+    padding: 0;
+}
+
+.close__btn:hover {
+    opacity: 1;
+}
+.close__btn:before, .close__btn:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 24px;
+    width: 1px;
+    background-color: #afafaf;
+}
+
+.close__btn:before {
+    transform: rotate(45deg);
+}
+
+.close__btn:after {
+    transform: rotate(-45deg);
 }
 
 .portfolio__form {
@@ -161,7 +214,7 @@
 }
 
 .custom-checkbox:checked + label::before {
-    background-image: url("/img/checkboxstrelka.svg");
+    background-image: url("../img/checkboxstrelka.svg");
 }
 
 .chechboxMaster label {
@@ -207,7 +260,7 @@
 }
 
 .custom-radio:checked + label::before {
-    background-image: url("/img/radioellipse.svg");
+    background-image: url("../img/radioellipse.svg");
 }
 
 .radioTime label {
@@ -245,6 +298,7 @@
 
 .quantity__inner {
     display: inline-flex;
+    width: 139px;
     border-radius: 5px;
     border: 1px solid #AFAFAF;
     margin-bottom: 24px;
@@ -282,7 +336,7 @@
     box-sizing: border-box;
     border-radius: 5px;
     margin-bottom: 48px;
-
+    width: 139px;
 }
 
 .form__mode-item {
@@ -320,4 +374,34 @@
 }
 .form__mode .item-offline input[type=radio]:checked + label {
     background: rgba(229, 229, 229, 0.5);
+}
+
+.btn__submit {
+    display: flex;
+    width: 100%;
+    margin-bottom: 72px;
+}
+
+.btn__submit button {
+    width: 200px;
+    height: 42px;
+    margin-right: 48px;
+    background-color: #FF4F12;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.submit__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.submit__text p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 13px;
+    color: #AFAFAF;
+    border-bottom: 1px solid #E5E5E5;
 }

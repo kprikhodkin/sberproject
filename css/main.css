@@ -364,7 +364,7 @@ body {
 }
 
 
-.join button {
+.join a {
     border: 1px solid #E7EAEC;
     border-radius: 5px;
     background-color: #fff;
@@ -372,9 +372,11 @@ body {
     cursor: pointer;
     font-size: 14px;
     line-height: 16px;
+    text-decoration: none;
+    color:#000;
 }
 
-.join button:hover {
+.join a:hover {
     background-color: #E7EAEC;
 }
 
