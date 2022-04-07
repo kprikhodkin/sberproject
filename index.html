@@ -203,7 +203,9 @@
                         </div>
                         <div class="footer__feedback">
                             <a href="#" class="footer__feedback__link">
-                                <img src="img/Vector 29.svg" alt="Сообщение" class="footer_feedback_logo">
+                                <svg class="footer_feedback_logo" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1V12L2.84615 10.7477H13V1H1Z" fill="white" stroke="black"/>
+                                </svg>
                                 <span>Форма обратной связи</span>
                             </a>
                         </div>
@@ -258,7 +260,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <img src="img/appstore.svg alt" alt="App Store">
+                                            <img src="img/appstore.svg" alt="App Store">
                                         </a>
                                     </li>
                                     <li>
@@ -281,9 +283,10 @@
                 </div>
             </div>
         </footer>
+        <div class="form-container">
             <div class="placeholder-form" id="openModal">
                 <form action="#">
-                    <a href="#" class="close__btn"></a>
+                    <a href="index.html" class="close__btn"></a>
                     <h1 class="title__form title__form--huge">Регистрация</h1>
                     <div class="placeholder-container">
                         <input type="text" id="name" name="name" placeholder=" ">
@@ -294,7 +297,7 @@
                         <label for="phone">Телефон</label>
                     </div>
                     <div class="placeholder-container">
-                        <select id="city" name="city" aria-placeholder=" ">
+                        <select id="city" name="city">
                             <option></option>
                             <option value="Екатеринбург">Екатеринбург</option>
                             <option value="Каменск-Уральский">Каменск-Уральский</option>
@@ -379,11 +382,13 @@
                 <div class="btn__submit">
                     <button type="submit">Отправить</button>
                     <div class="submit__text">
-                        <p>Нажимая на кнопку, вы соглашаетесь с <br>Политикой обработки персональных данных</p>
+                        <p>Нажимая на кнопку, вы соглашаетесь с <br><a href="#">Политикой обработки персональных данных</a></p>
                     </div>
                 </div>
             </form>
         </div>
+    </div>
+
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="js/main.js"></script>
 </body>
