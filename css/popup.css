@@ -14,12 +14,8 @@
 }
 
 .form-container {
-
-    top: 0;
-    left:0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
+    position: fixed;
+    z-index: 0;
     background: rgba(0,0,0, 0.2);
 }
 
@@ -50,6 +46,7 @@
 .placeholder-form:target {
     opacity: 1;
     pointer-events: auto;
+    overflow: hidden;
     overflow-y: auto;
 }
 
@@ -80,6 +77,11 @@
     height: 32px;
     padding: 0 16px;
     outline: 0;
+    appearance: none;
+    background: url('../img/strelkaselecta.svg') no-repeat right;
+}
+#cityinput {
+    display: none;
 }
 
 .placeholder-container label {
@@ -171,6 +173,7 @@
     visibility: hidden;
     position: absolute;
 }
+
 
 .input__file-button-text {
     position: relative;
@@ -298,7 +301,7 @@
     line-height: 13px;
 }
 
-.slidecontainer {
+/*.slidecontainer {
     width: 100%;
     margin-bottom: 38px;
 }
@@ -317,6 +320,60 @@
     height: 13px;
     background: #FF4F12;
     border-radius: 50%;
+}*/
+
+.range-slider {
+    width: 100%;
+    margin-bottom: 38px;
+    position: relative;
+}
+
+output {
+    position: absolute;
+	left: 7px;
+	top: 25px;
+	color: #979797;
+    font-size: 11px;
+
+}
+
+/*.range-slider input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 13px;
+    height: 13px;
+    background: #FF4F12;
+    border-radius: 50%;
+}
+
+.range-slider__range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1px;
+    border-radius: 5px;
+    background: #FF4F12;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}*/
+
+#fader {
+	position: relative;
+	left: 3px;
+	width: 100%;
+	height: 1px;
+	background: #FF4F12;
+	-webkit-appearance: none;
+	outline: none;
+	border-radius: 4px;
+}
+
+#fader::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: #FF4F12;
+
 }
 
 .title__form--regular {
@@ -325,7 +382,7 @@
     margin-top: 0;
     margin-bottom: 8px;
 }
-
+/*
 .quantity__inner {
     display: inline-flex;
     width: 139px;
@@ -356,6 +413,60 @@
     font-size: 12px;
     font-weight: 300;
     color: #000;
+}*/
+
+.counter {
+    display: flex;
+    max-width: 140px;
+    margin-bottom: 24px;
+}
+
+.counter__input {
+    border: 1px solid #AFAFAF;
+    border-left: none;
+    border-right: none;
+    min-height: 30px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 12px;
+    font-weight: 300;
+    color: #000;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.counter__button {
+    min-height: 30px;
+    width: 30px;
+    min-width: 30px;
+    apperance: none;
+    border: 1px solid #AFAFAF;
+    color: #FF4F12;
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.counter__button:hover {
+    background-color: #FF4F12;
+    color: #fff;
+}
+
+.counter__button--max {
+    border-radius: 0 5px 5px 0;
+}
+
+.counter__button--min {
+    border-radius: 5px 0 0 5px;
 }
 
 .form__mode {
@@ -436,6 +547,8 @@
     flex-direction: column;
     justify-content: center;
 }
+
+
 
 .submit__text p {
     margin: 0;

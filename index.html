@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="/js/jquery.js"></script>
+    <link rel="stylesheet" href="css/mobile.css">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no">
     <title>Title</title>
 </head>
@@ -304,6 +305,7 @@
                             <option value="Верхняя пышма">Верхняя пышма</option>
                             <option value="Первоуральск">Первоуральск</option>
                         </select>
+                        <input type="text" name="city" id="cityinput" placeholder=" ">
                         <label for="city">Город</label>
                     </div>
                     <div class="placeholder-container">
@@ -311,7 +313,7 @@
                         <label for="msg">Комментарий</label>
                     </div>
                     <h2 class="title__form title__form--big">Прикрепите портфолио</h2>
-                    <div class="portfolio__form">
+                    <div class="portfolio__form" id="drop-zone">
                         <input type="file" name="myfile" id="myFile" class="input__file">
                         <div class="portfolio__text">
                             <p class="text--decoration">Переместите сюда</p>
@@ -339,24 +341,28 @@
                 <h2 class="title__form title__form--medium">Выберите один из промежутков времени</h2>
                 <div class="radioTime">
                     <div>
-                        <input type="radio" id="rbFirstTime" class="custom-radio">
+                        <input type="radio" name="rbName" id="rbFirstTime" class="custom-radio">
                         <label for="rbFirstTime">12:00 – 14:00</label>
                     </div>
                     <div>
-                        <input type="radio" id="rbSecondTime" class="custom-radio">
+                        <input type="radio" name="rbName" id="rbSecondTime" class="custom-radio">
                         <label for="rbSecondTime">15:00 – 17:00</label>
                     </div>
                     <div>
-                        <input type="radio" id="rbThirdTime" class="custom-radio">
+                        <input type="radio" name="rbName" id="rbThirdTime" class="custom-radio">
                         <label for="rbThirdTime">19:00 – 21:00</label>
                     </div>
                 </div>
                 <h2 class="title__form title__form--medium">Сколько вы готовы заплатить за мероприятие?</h2>
-                <div class="slidecontainer">
+                <!--<div class="slidecontainer">
                     <input type="range" min="1" max="2000" id="myRange">
+                </div>-->
+                <div class="range-slider">
+	        	    <output for="fader" id="volume">0</output>
+                    <input type="range" id="fader" min="0" max="600" value="0" step="1" oninput="outputUpdate(value)">
                 </div>
                 <h2 class="title__form title__form--regular">Кол-во билетов</h2>
-                <div class="quantity__inner">
+                <!--<div class="quantity__inner">
                     <button class="btn__minus"><svg width="8" height="2" viewBox="0 0 8 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 1L8 1" stroke="#FF4F12"/>
                         </svg>
@@ -367,7 +373,12 @@
                         <path d="M4 0L4 8" stroke="#FF4F12"/>
                         </svg>
                     </button>
-                </div>
+                </div>-->
+                <div class="counter">
+                    <button class="counter__button counter__button--min">-</button>
+                        <input type="number" value="0" min="0" class="counter__input">
+                    <button class="counter__button counter__button--max">+</button>
+                  </div>
                 <h2 class="title__form title__form--regular">Режим</h2>
                 <div class="form__mode">
                     <div class="form__mode-item item-online">

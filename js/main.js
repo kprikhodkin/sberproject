@@ -22,30 +22,28 @@ var swiper = new Swiper(".mySwiper", {
     
   });
 
+const counter = document.querySelector('.counter');
+const counterInput = counter.querySelector('.counter__input');
+const counterMinButton = counter.querySelector('.counter__button--min');
+const counterMaxButton = counter.querySelector('.counter__button--max');
 
+function increaseValue() {
+  let value = +counterInput.value
+  counterInput.value = value + 1
+}
 
-$('.quantity__inner .btn__minus').click(function() {
-    let $input = $(this).parent().find('.quantity');
-    let count = parseInt($input.val()) - 1;
-    count = count < 1 ? 1 : count;
-    $input.val(count);
-});
+function decreaseValue() {
+  let value = +counterInput.value
+  if (value !== 0) {
+    counterInput.value = value - 1  
+  }
+}
 
-$('.quantity__inner .btn__plus').click(function() {
-    let $input = $(this).parent().find('.quantity');
-    let count = parseInt($input.val()) + 1;
-    count = count > parseInt($input.data('max-count')) ? parseInt($input.data('max-count')) : count;
-    $input.val(parseInt(count));
-}); 
+counterMaxButton.addEventListener('click', increaseValue)
 
-$('.quantity__inner .quantity').bind("change keyup input click", function() {
-    if (this.value.match(/[^0-9]/g)) {
-        this.value = this.value.replace(/[^0-9]/g, '');
-    }
-    if (this.value == "") {
-        this.value = 1;
-    }
-    if (this.value > parseInt($(this).data('max-count'))) {
-        this.value = parseInt($(this).data('max-count'));
-    }    
-}); 
+counterMinButton.addEventListener('click', decreaseValue)
+
+function outputUpdate(vol) {
+    var output = document.querySelector('#volume');
+    output.value = vol;
+}
