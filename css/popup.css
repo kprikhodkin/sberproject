@@ -13,11 +13,6 @@
     margin-top: 24px;
 }
 
-.form-container {
-    position: fixed;
-    z-index: 0;
-    background: rgba(0,0,0, 0.2);
-}
 
 .placeholder-form {
     position: fixed;
@@ -46,7 +41,6 @@
 .placeholder-form:target {
     opacity: 1;
     pointer-events: auto;
-    overflow: hidden;
     overflow-y: auto;
 }
 
